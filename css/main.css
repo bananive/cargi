@@ -1,0 +1,99 @@
+@import url(./font.css);
+body {
+  font-family: "Museo Sans";
+}
+
+a {
+  text-decoration: none;
+}
+
+.top-header {
+  padding: 5px 0;
+  background-color: #080808;
+}
+.top-header__info {
+  font-weight: 500;
+  font-size: 14px;
+  color: #7b7b7b;
+}
+.top-header__info:not(:last-child) {
+  margin-right: 30px;
+}
+.top-header__icon {
+  display: inline-block;
+  width: 29px;
+  height: 29px;
+  background-color: #272727;
+  font-size: 12px;
+  text-align: center;
+  line-height: 31px;
+  color: rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.top-header__link {
+  color: #7b7b7b;
+}
+.top-header__link:hover {
+  color: #fff;
+}
+.top-header__dot {
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  margin: 0 5px;
+  background-color: #f62221;
+  opacity: 0.5;
+  border-radius: 50%;
+}
+
+.social__link {
+  display: inline-block;
+  width: 29px;
+  height: 29px;
+  background-color: rgba(246, 34, 33, 0.25);
+  font-size: 13px;
+  text-align: center;
+  line-height: 31px;
+  color: #fff;
+  border-radius: 50%;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.social__link:hover {
+  background-color: #f62221;
+  color: #fff;
+}
+.social__link:not(:first-child) {
+  margin-left: 15px;
+}
+
+.intro {
+  padding-top: 30px;
+  padding-bottom: 344px;
+  background-image: url(../img/bg.jpg);
+}
+.last-works {
+  position: relative;
+}
+.last-works:after {
+  content: "";
+  position: absolute;
+  width: 748px;
+  height: 226px;
+  background-image: url(../img/cargi_logo.svg);
+  top: 30px;
+  right: 30px;
+}
+
+.circle__icon {
+  display: inline-block;
+  width: 29px;
+  height: 29px;
+  background-color: #272727;
+  font-size: 12px;
+  text-align: center;
+  line-height: 31px;
+  color: #fff;
+  border-radius: 5px;
+}

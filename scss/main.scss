@@ -1,0 +1,107 @@
+@import url(./font.css);
+
+$primary : rgb(246, 34, 33);
+
+@mixin circle_icon($size: 29px, $fsize: 12px, $bg: #272727, $color: #fff, $radius: 50%) {
+    display: inline-block;
+    width: $size;
+    height: $size;
+    background-color: $bg;
+    font-size: $fsize;
+    text-align: center;
+    line-height: $size + 2px;
+    color: $color;
+    border-radius: $radius;
+}
+
+@mixin link($color: #fff, $hcolor: $primary) {
+    color: $color;
+    &:hover {
+        color: $hcolor;
+    }
+}
+
+body {
+    font-family: 'Museo Sans';
+}
+
+a {
+    text-decoration: none;
+    // &:hover {
+    //     color: $primary;
+    // }
+}
+
+.top-header {
+    padding: 5px 0;
+    background-color: #080808;
+
+    &__info {
+        font-weight: 500;
+        font-size: 14px;
+        color: #7b7b7b;
+        &:not(:last-child) {
+            margin-right: 30px;
+        }
+    }
+    &__icon {
+        @include circle_icon($color: rgba(255,255,255,0.7));
+        margin-right: 10px;
+    }
+    &__link {
+        @include link($color: #7b7b7b, $hcolor: #fff);
+    }
+    &__dot {
+        display: inline-block;
+        width: 5px;
+        height: 5px;
+        margin: 0 5px;
+        background-color: $primary;
+        opacity: 0.5;
+        border-radius: 50%;
+    }
+}
+
+.social {
+    &__link {
+        @include circle_icon($fsize: 13px, $bg: rgba(246, 34, 33, 0.25));
+
+        transition: all 0.3s ease;
+        &:hover {
+            background-color: rgba(246, 34, 33, 1);
+            color: #fff;
+        }
+        &:not(:first-child) {
+            margin-left: 15px;
+        }
+    }
+}
+
+.intro {
+    padding-top: 30px;
+    padding-bottom: 344px;
+    background-image: url(../img/bg.jpg);
+
+    &__content {}
+    &__type {}
+    &__title {}
+    &__text {}
+}
+
+.last-works {
+    position: relative;
+    &:after {
+        content: '';
+        position: absolute;
+        width: 748px;
+        height: 226px;
+        background-image: url(../img/cargi_logo.svg);
+        top: 30px;
+        right: 30px;
+    }
+}
+
+.circle__icon {
+    // @include circle_icon($size: 60px, $fsize: 36px, $bg: yellow);
+    @include circle_icon($radius: 5px);
+}
